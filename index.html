@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 5 & Eksperimen Mandiri</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; }
+        section { margin-bottom: 25px; padding: 15px; border: 1px solid #ddd; border-radius: 6px; background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+
+    <h1>Praktikum 5: JavaScript Dasar & Eksperimen Mandiri</h1>
+    <p id="pesan">Konten awal.</p>
+
+    <section>
+        <h3>Latihan 6: Cek Bilangan Genap atau Ganjil</h3>
+        <label for="bilangan">Masukkan bilangan bulat: </label>
+        <input type="number" id="bilangan" step="1">
+        <button type="button" onclick="cekBilangan()">Periksa</button>
+        <p id="hasilBilangan"></p>
+    </section>
+
+    <section>
+        <h3>Eksperimen Mandiri 7: Tabel Perkalian Angka 7</h3>
+        <button type="button" onclick="tampilkanTabelPerkalian7()">Tampilkan Tabel Perkalian 7</button>
+        <ul id="tabelPerkalian"></ul>
+    </section>
+
+    <section>
+        <h3>Eksperimen 8 & 10: Daftar Menu Makanan Lengkap</h3>
+        <form id="formMenu">
+            <label><input type="checkbox" class="menu" value="5000"> Ayam Goreng - Rp5.000</label><br>
+            <label><input type="checkbox" class="menu" value="500"> Tempe - Rp500</label><br>
+            <label><input type="checkbox" class="menu" value="2500"> Telur Dadar - Rp2.500</label><br>
+            <label><input type="checkbox" class="menu" value="4000"> Es Teh Manis - Rp4.000</label><br>
+            <label><input type="checkbox" class="menu" value="7000"> Mie Goreng - Rp7.000</label><br><br>
+            
+            <p>Total Harga: Rp<span id="total">0</span></p>
+            <p id="pesanErrorMenu" style="color: red;"></p>
+            <button type="button" onclick="validasiDanPesanMenu()">Pesan Sekarang (Validasi)</button>
+        </form>
+    </section>
+
+    <section>
+        <h3>Eksperimen Mandiri 11: Sembunyikan atau Tampilkan Elemen</h3>
+        <button type="button" onclick="toggleElemen()">Sembunyikan / Tampilkan Kotak</button>
+        <div id="kotakTarget" style="margin-top: 10px; padding: 10px; background-color: #d1ecf1; border: 1px solid #bee5eb;">
+            Ini adalah elemen teks interaktif yang dapat disembunyikan atau ditampilkan!
+        </div>
+    </section>
+
+    <section>
+        <h3>Mini Project: Kalkulator Nilai Mahasiswa</h3>
+        <label for="nilaiTugas">Nilai Tugas (0-100): </label><input type="number" id="nilaiTugas"><br><br>
+        <label for="nilaiUts">Nilai UTS (0-100): </label><input type="number" id="nilaiUts"><br><br>
+        <label for="nilaiUas">Nilai UAS (0-100): </label><input type="number" id="nilaiUas"><br><br>
+        <button type="button" onclick="prosesHitungNilai()">Hitung Nilai Akhir</button>
+        <p id="hasilNilaiAkhir"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
